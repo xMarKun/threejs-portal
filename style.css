@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* loading */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s 0.1s ease, visibility 0s 0.4s ease;
+}
+.loading.loading--finished {
+  opacity: 0;
+  visibility: hidden;
+}
+.loading-bar {
+  width: 50%;
+  height: 1px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+/* canvas */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* point */
+.point {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-weight: 400;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.point:hover .point-txt {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s ease;
+}
+.point-num {
+  cursor: help;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 16px;
+}
+.point-txt {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 5px;
+}
